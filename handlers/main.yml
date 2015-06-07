@@ -1,0 +1,6 @@
+---
+# handlers file for networking role
+- name: restart networking
+  service: >
+    name=network
+    state=restarted
