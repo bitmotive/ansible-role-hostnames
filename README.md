@@ -1,38 +1,40 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+This role will configure hostnames and network related settings.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+This role has only been tested on EL 6 systems. EL 7 system support is anticipated in the future.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+__role\_networking\_hostname\_short__: Short hostname value (i.e. web01). This setting defaults to the builtin Ansible environment variable named inventory_hostname_short.
 
-Dependencies
-------------
+__role\_networking\_etc\_hosts\_lines__: A list of complete lines to be included in /etc/hosts. Defaults to an empty list and will be skipped.
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+Example:
+```
+[
+'192.168.10.1  web01.demoapp.com  web01',
+'192.168.10.2  web02.demoapp.com  web02'
+]
+```
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Override the above variables by modifying your project's group_vars or host_vars.
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```
+- hosts: servers
+  roles:
+    - { role: bitmotive.ansible-el-role-networking }
+```
 
 License
 -------
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+MIT

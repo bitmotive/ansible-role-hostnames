@@ -1,5 +1,5 @@
 ---
-# defaults file for networking
+# defaults file for networking role
 
 # Override this variable to manually set hostname. Otherwise,
 # the shortname from the playbook inventory file will be used.
