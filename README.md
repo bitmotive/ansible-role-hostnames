@@ -11,9 +11,9 @@ This role has only been tested on EL 6 systems. EL 7 system support is anticipat
 Role Variables
 --------------
 
-__role\_networking\_hostname\_short__: Short hostname value (i.e. web01). This setting defaults to the builtin Ansible environment variable named inventory_hostname_short.
+__role\_hostnames\_hostname\_short__: Short hostname value (i.e. web01). This setting defaults to the builtin Ansible environment variable named inventory_hostname_short.
 
-__role\_networking\_etc\_hosts\_lines__: A list of complete lines to be included in /etc/hosts. Defaults to an empty list and will be skipped.
+__role\_hostnames\_etc\_hosts\_lines__: A list of complete lines to be included in /etc/hosts. Defaults to an empty list and will be skipped.
 
 Example:
 ```

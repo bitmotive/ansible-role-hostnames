@@ -1,5 +1,5 @@
 ---
-# handlers file for networking role
+# handlers file for hostnames role
 - name: restart networking
   service: >
     name=network

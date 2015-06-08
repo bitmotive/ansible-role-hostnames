@@ -1,9 +1,9 @@
 ---
-# defaults file for networking role
+# defaults file for hostnames role
 
 # Override this variable to manually set hostname. Otherwise,
 # the shortname from the playbook inventory file will be used.
-role_networking_hostname_short: "{{ inventory_hostname_short }}"
+role_hostnames_hostname_short: "{{ inventory_hostname_short }}"
 
 # Override this variable with lines to be stored in /etc/hosts
-role_networking_etc_hosts_lines: []
+role_hostnames_etc_hosts_lines: []

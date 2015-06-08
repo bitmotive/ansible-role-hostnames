@@ -1,19 +1,19 @@
 ---
-# tasks file for networking
+# tasks file for hostnames role
 
-- name: networking | set node hostname
-  hostname: name={{ role_networking_hostname_short }}
+- name: hostnames | set node hostname
+  hostname: name={{ role_hostnames_hostname_short }}
   tags:
     - hostname
 
-- name: networking | add custom lines to /etc/hosts
+- name: hostnames | add custom lines to /etc/hosts
   lineinfile: >
     dest=/etc/hosts
     line='{{ item }}'
     owner=root
     group=root
     mode=0644
-  with_items: "{{ role_networking_etc_hosts_lines }}"
+  with_items: "{{ role_hostnames_etc_hosts_lines }}"
   notify: restart networking
   tags:
     - hostname
