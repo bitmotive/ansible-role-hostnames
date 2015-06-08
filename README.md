@@ -31,7 +31,7 @@ Override the above variables by modifying your project's group_vars or host_vars
 ```
 - hosts: servers
   roles:
-    - { role: bitmotive.ansible-role-hostnames }
+    - { role: bitmotive.ansible-role-hostnames, tags: "hostnames,common" }
 ```
 
 License
