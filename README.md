@@ -1,7 +1,7 @@
-Role Name
+ansible-role-hostnames
 =========
 
-This role will configure hostnames for an EL server.
+Hostname configuration for EL systems.
 
 Requirements
 ------------
