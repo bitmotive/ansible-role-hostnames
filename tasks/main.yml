@@ -1,12 +1,12 @@
 ---
 # tasks file for hostnames role
 
-- name: hostnames | set node hostname
+- name: Set node hostname
   hostname: name={{ role_hostnames_hostname_short }}
   tags:
     - hostname
 
-- name: hostnames | add custom lines to /etc/hosts
+- name: Add custom lines to /etc/hosts
   lineinfile: >
     dest=/etc/hosts
     line='{{ item }}'
