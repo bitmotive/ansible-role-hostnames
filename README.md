@@ -1,7 +1,7 @@
 Role Name
 =========
 
-This role will configure hostnames and network related settings.
+This role will configure hostnames for an EL server.
 
 Requirements
 ------------
@@ -31,7 +31,7 @@ Override the above variables by modifying your project's group_vars or host_vars
 ```
 - hosts: servers
   roles:
-    - { role: bitmotive.ansible-el-role-networking }
+    - { role: bitmotive.ansible-role-hostnames }
 ```
 
 License
