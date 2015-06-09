@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Mark Hammonds
-  description: 
+  description: Configure hostnames
   company: Bitmotive, LLC
   license: MIT
   min_ansible_version: 1.2
